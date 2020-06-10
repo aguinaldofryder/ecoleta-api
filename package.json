@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "migrate": "knex --knexfile knexfile.ts migrate:latest",
-    "seed": "knex --knexfile knexfile.ts seed:run"
+    "seed": "knex --knexfile knexfile.ts seed:run",
+    "postinstall": "yarn migrate && yarn seed"
   },
   "keywords": [],
   "author": "",
