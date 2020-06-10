@@ -8,6 +8,7 @@
     "migrate": "knex --knexfile knexfile.ts migrate:latest",
     "seed": "knex --knexfile knexfile.ts seed:run",
     "build": "tsc",
+    "postbuild": "cp -r ./uploads ./dist/uploads",
     "start": "node dist/src/server.js"
   },
   "keywords": [],
