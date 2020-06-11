@@ -31,6 +31,8 @@ routes.post(
         longitude: Joi.number().required(),
         city: Joi.string().required(),
         uf: Joi.string().required().max(2),
+        address: Joi.string(),
+        number: Joi.string(),
         items: Joi.string()
           .required()
           .regex(/[0-9,]+$/),

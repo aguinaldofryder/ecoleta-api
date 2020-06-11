@@ -9,8 +9,10 @@ export async function up(knex: Knex) {
     table.string('whatsapp').notNullable();
     table.decimal('latitude').notNullable();
     table.decimal('longitude').notNullable();
-    table.decimal('city').notNullable();
     table.decimal('uf', 2).notNullable();
+    table.decimal('city').notNullable();
+    table.string('address').notNullable();
+    table.string('number').notNullable();
   });
 }
 export async function down(knex: Knex) {
